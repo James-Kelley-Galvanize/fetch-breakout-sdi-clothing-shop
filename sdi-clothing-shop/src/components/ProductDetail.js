@@ -2,6 +2,12 @@ import ProductList from "./ProductList"
 
 const ProductDetail = ({product, photo})=>{
     let {name, description, default_price, id, slogan} = product;
+
+    if (photo === null){
+        photo = 'https://http.cat/204'
+    }
+
+
     return (
         <div className="product-detail">
             <h1>{name}</h1>
